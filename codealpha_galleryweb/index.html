@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Capture & Create</h1>
+        <p>A collection of moments frozen in time.</p>
+
+        <div class="upload-container">
+            <input type="file" id="imageUpload" multiple accept="image/*">
+            <label for="imageUpload" class="upload-btn">
+                <span>+</span> Upload Images
+            </label>
+        </div>
+    </header>
+
+    <div class="controls-container">
+        <div class="filter-group">
+            <span class="filter-label">Categories:</span>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="urban">Urban</button>
+            <button class="filter-btn" data-filter="abstract">Abstract</button>
+        </div>
+
+        <div class="filter-group">
+            <span class="filter-label">Visual Effects:</span>
+            <button class="visual-btn active" data-visual="none">Normal</button>
+            <button class="visual-btn" data-visual="grayscale">Grayscale</button>
+            <button class="visual-btn" data-visual="sepia">Sepia</button>
+            <button class="visual-btn" data-visual="invert">Invert</button>
+        </div>
+    </div>
+
+    <main class="gallery-container">
+        <!-- Empty State Message -->
+        <div id="empty-state">
+            <h2>SYSTEM READY</h2>
+            <p>Awaiting Visual Input. Upload images to initialize gallery.</p>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <button class="nav-btn prev-btn">&#10094;</button>
+        <div class="lightbox-content">
+            <img class="lightbox-img" src="" alt="Lightbox Image">
+            <div class="lightbox-caption"></div>
+        </div>
+        <button class="nav-btn next-btn">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
